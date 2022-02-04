@@ -4,6 +4,12 @@
     <dimen name="button_width">0dp</dimen>
     <dimen name="button_height">80dp</dimen>
     <dimen name="size_text_button">24sp</dimen>
-    <dimen name="margin_button">8dp</dimen>
+    <dimen name="margin_button">4dp</dimen>
     <dimen name="text_size_display">36sp</dimen>
+    <dimen name="padding_normal">8dp</dimen>
+    <dimen name="padding_small">4dp</dimen>
+    <dimen name="button_height_zero_dp">0dp</dimen>
+    <dimen name="columnWeight_button">1</dimen>
+    <dimen name="rowSpan_big_button">2</dimen>
+    <dimen name="corner_radius">16dp</dimen>
 </resources>
