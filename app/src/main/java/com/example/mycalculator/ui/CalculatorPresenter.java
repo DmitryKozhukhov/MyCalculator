@@ -32,25 +32,25 @@ public class CalculatorPresenter {
 
         if (previousOperation != null && !onDot) {
             argTwo = argTwo * 10 + digit;
-            view.showResult(String.valueOf(argTwo));
+            showFormattedResult(argTwo);
         } else if (previousOperation != null) {
             argTwo = argTwo + digit / Math.pow(10, n);
-            view.showResult(String.valueOf(argTwo));
+            showFormattedResult(argTwo);
             n++;
         } else if (onCalc) {
             argOne = 0.0;
             view.showOperand("");
             argOne = argOne * 10 + digit;
-            view.showResult(String.valueOf(argOne));
+            showFormattedResult(argOne);
             onCalc = false;
         } else if (!onDot) {
             view.showOperand("");
             argOne = argOne * 10 + digit;
-            view.showResult(String.valueOf(argOne));
+            showFormattedResult(argOne);
         } else {
             view.showOperand("");
             argOne = argOne + digit / Math.pow(10, n);
-            view.showResult(String.valueOf(argOne));
+            showFormattedResult(argOne);
             n++;
         }
     }
@@ -105,11 +105,20 @@ public class CalculatorPresenter {
     }
 
     public void onResult(String result) {
-        argOne = Double.parseDouble(result);
+        argOne = Double.valueOf(result);
         if (argOne % 1 == 0) {
             n = 1;
         } else n = BigDecimal.valueOf(argOne).scale() + 1;
         onDot = argOne % 1 != 0;
-        view.showResult(String.valueOf(argOne));
+        showFormattedResult(argOne);
+    }
+
+    public void showFormattedResult(double value) {
+
+        if (value == (long) value) {
+            view.showResult(String.valueOf((long) value));
+        } else {
+            view.showResult(String.valueOf(value));
+        }
     }
 }

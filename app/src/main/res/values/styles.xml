@@ -6,7 +6,7 @@
         <item name="android:layout_height">@dimen/button_height</item>
         <item name="android:layout_marginEnd">@dimen/margin_button</item>
         <item name="android:layout_marginStart">@dimen/margin_button</item>
-        <item name="android:backgroundTint">@color/color_number_button</item>
+        <item name="backgroundTint">@color/color_number_button</item>
         <item name="android:textColor">@color/black</item>
         <item name="android:textSize">@dimen/size_text_button</item>
         <item name="android:textStyle">bold</item>
@@ -15,11 +15,20 @@
     </style>
 
     <style name="CalcButton.ActionSmallButton">
-        <item name="android:backgroundTint">@color/operand_button</item>
+        <item name="backgroundTint">@color/operand_button</item>
     </style>
 
+    <style name="CalcButton.V2">
+        <item name="backgroundTint">@android:color/holo_red_dark</item>
+    </style>
+
+    <style name="CalcButton.V3">
+        <item name="backgroundTint">@android:color/holo_green_dark</item>
+    </style>
+
+
     <style name="CalcButton.ActionSmallButton.ActionBigButton">
-        <item name="android:layout_rowSpan">@dimen/rowSpan_big_button</item>
+        <item name="android:layout_rowSpan">2</item>
         <item name="android:layout_height">@dimen/button_height_zero_dp</item>
         <item name="android:layout_gravity">fill_vertical</item>
     </style>
@@ -36,4 +45,7 @@
         <item name="android:textSize">@dimen/text_size_display</item>
         <item name="android:textColor">@color/color_text_display</item>
     </style>
+
+
+
 </resources>
